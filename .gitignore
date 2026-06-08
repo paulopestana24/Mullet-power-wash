@@ -1,0 +1,20 @@
+# ---- Confidential / internal — never publish ----
+CLAUDE.md
+PROJECT-NOTES.md
+New Local SEO Clients For ProfResults.docx
+New Local SEO Clients For ProfResults.md
+Website Structure for Perfect SEO.md
+
+# Dev/QA artifacts
+temporary screenshots/
+_contactsheet.html
+
+# Bulk download archives (duplicate source photos — not for the site)
+*.zip
+
+# OS / tooling
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.vercel
