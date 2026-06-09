@@ -12,6 +12,13 @@ _contactsheet.html
 # Bulk download archives (duplicate source photos — not for the site)
 *.zip
 
+# Source media library — NOT for the repo. The website only uses the curated
+# copies in images/. This folder holds full-size originals + large videos
+# (.MOV up to ~180MB) that exceed GitHub's 100MB file limit.
+Photos & Videos/
+*.MOV
+*.mov
+
 # OS / tooling
 node_modules/
 .DS_Store
