@@ -309,7 +309,7 @@
 <!-- ============================ HERO ============================ -->
 <section class="relative flex items-end overflow-hidden grain" style="min-height:clamp(600px,100svh,880px)">
   <video class="hero-video absolute inset-0 w-full h-full object-cover object-center" autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg" aria-hidden="true">
-    <source src="videos/hero-v2.mp4" type="video/mp4" />
+    <source src="videos/hero-full.mp4" type="video/mp4" />
   </video>
   <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
   <div class="absolute inset-0 hero-overlay" aria-hidden="true"></div>
@@ -379,7 +379,7 @@
       <div class="svc ucard group relative bg-white rounded-3xl border border-mist p-7 shadow-card overflow-hidden">
         <span class="absolute top-4 right-4 z-10 text-[.62rem] uppercase tracking-[.14em] font-semibold text-cyan-700 bg-cyan-100 rounded-full px-2.5 py-1">Most popular</span>
         <div class="svc-media -mx-7 -mt-7 mb-5 relative h-36 overflow-hidden bg-navy">
-          <video class="svc-vid w-full h-full object-cover" muted loop playsinline preload="none" poster="images/card-soft-poster.jpg" aria-hidden="true">
+          <video class="svc-vid w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="images/card-soft-poster.jpg" aria-hidden="true">
             <source src="videos/card-soft.mp4" type="video/mp4" />
           </video>
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/10"></div>
@@ -394,7 +394,7 @@
       <!-- Pressure Washing -->
       <div class="svc ucard group relative bg-white rounded-3xl border border-mist p-7 shadow-card overflow-hidden">
         <div class="svc-media -mx-7 -mt-7 mb-5 relative h-36 overflow-hidden bg-navy">
-          <video class="svc-vid w-full h-full object-cover" muted loop playsinline preload="none" poster="images/card-pressure-poster.jpg" aria-hidden="true">
+          <video class="svc-vid w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="images/card-pressure-poster.jpg" aria-hidden="true">
             <source src="videos/card-pressure.mp4" type="video/mp4" />
           </video>
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/10"></div>
@@ -422,7 +422,7 @@
       <!-- Gutters & Downspouts -->
       <div class="svc ucard group relative bg-white rounded-3xl border border-mist p-7 shadow-card overflow-hidden">
         <div class="svc-media -mx-7 -mt-7 mb-5 relative h-36 overflow-hidden bg-navy">
-          <video class="svc-vid w-full h-full object-cover" muted loop playsinline preload="none" poster="images/card-gutters-poster.jpg" aria-hidden="true">
+          <video class="svc-vid w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="images/card-gutters-poster.jpg" aria-hidden="true">
             <source src="videos/card-gutters.mp4" type="video/mp4" />
           </video>
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/10"></div>
@@ -947,21 +947,13 @@
     });
   }
 
-  // videos: respect reduced-motion; play card videos only while in view
+  // videos autoplay + loop continuously; only pause for reduced-motion users
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var heroVid = document.querySelector('.hero-video');
-  if(heroVid && reduce){ try{ heroVid.pause(); }catch(_){ } }
-  var svcVids = document.querySelectorAll('.svc-vid');
-  if(svcVids.length && !reduce && 'IntersectionObserver' in window){
-    var vio = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        var v = e.target;
-        if(e.isIntersecting){ var p = v.play(); if(p && p.catch) p.catch(function(){}); }
-        else { v.pause(); }
-      });
-    }, { threshold:.25 });
-    svcVids.forEach(function(v){ vio.observe(v); });
-  }
+  var allVids = document.querySelectorAll('.hero-video, .svc-vid');
+  allVids.forEach(function(v){
+    if(reduce){ try{ v.pause(); }catch(_){ } }
+    else { var p = v.play(); if(p && p.catch) p.catch(function(){}); }
+  });
 })();
 </script>
 </body>
