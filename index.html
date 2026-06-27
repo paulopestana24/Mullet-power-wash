@@ -258,8 +258,8 @@
 
       <!-- actions -->
       <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Google reviews button (client request). TODO: point href to the real Google Business Profile reviews link. -->
-        <a href="https://www.google.com/maps/search/Mullet+Power+Wash+Plain+City+OH" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-2 rounded-full border border-mist bg-white pl-2.5 pr-3.5 py-2 text-sm font-semibold text-ink shadow-soft hover:border-cyan-300 hover:-translate-y-0.5 transition-[transform,border-color] duration-300" aria-label="See our Google reviews">
+        <!-- Google reviews button — scrolls to the live Google reviews widget on the page -->
+        <a href="#reviews" class="hidden md:inline-flex items-center gap-2 rounded-full border border-mist bg-white pl-2.5 pr-3.5 py-2 text-sm font-semibold text-ink shadow-soft hover:border-cyan-300 hover:-translate-y-0.5 transition-[transform,border-color] duration-300" aria-label="See our Google reviews">
           <svg viewBox="0 0 48 48" class="h-4 w-4" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.6l6.2 5.2C39.9 36.5 44 31 44 24c0-1.3-.1-2.6-.4-3.5z"/></svg>
           Reviews
           <span class="text-amber tracking-tight text-xs" aria-hidden="true">★★★★★</span>
@@ -292,7 +292,7 @@
       <a href="#process" class="py-2.5 border-b border-mist/70">How It Works</a>
       <a href="#reviews" class="py-2.5 border-b border-mist/70">Reviews</a>
       <a href="#areas" class="py-2.5 border-b border-mist/70">Areas We Serve</a>
-      <a href="https://www.google.com/maps/search/Mullet+Power+Wash+Plain+City+OH" target="_blank" rel="noopener" class="py-3 mt-1 flex items-center gap-2 font-semibold">
+      <a href="#reviews" class="py-3 mt-1 flex items-center gap-2 font-semibold">
         <svg viewBox="0 0 48 48" class="h-4 w-4" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.6l6.2 5.2C39.9 36.5 44 31 44 24c0-1.3-.1-2.6-.4-3.5z"/></svg>
         See our Google reviews
       </a>
@@ -550,69 +550,21 @@
 <section id="reviews" class="relative mesh-light py-20 sm:py-28">
   <div class="mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8">
     <!-- Google rating summary -->
-    <div class="reveal flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-      <div class="max-w-2xl">
-        <p class="eyebrow text-cyan-700">Loved By Local Homeowners</p>
-        <h2 class="font-display text-4xl sm:text-5xl font-bold text-ink mt-3">Reviews from your neighbors.</h2>
-      </div>
-      <!-- Google review card -->
-      <div class="flex items-center gap-4 bg-white rounded-2xl border border-mist shadow-card px-5 py-4 shrink-0">
-        <svg viewBox="0 0 48 48" class="h-9 w-9" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.6l6.2 5.2C39.9 36.5 44 31 44 24c0-1.3-.1-2.6-.4-3.5z"/></svg>
-        <div>
-          <div class="flex items-center gap-2">
-            <!-- TODO: replace 5.0 with the real Google rating once live -->
-            <span class="font-display text-xl font-bold text-ink leading-none">5.0</span>
-            <span class="text-amber text-lg tracking-tight leading-none" aria-hidden="true">★★★★★</span>
-          </div>
-          <p class="text-slate text-xs mt-1">Rated on <span class="font-semibold text-ink">Google</span></p>
-        </div>
-        <a href="https://www.google.com/maps/search/Mullet+Power+Wash+Plain+City+OH" target="_blank" rel="noopener" class="btn btn-outline text-sm px-4 py-2 ml-1">Read reviews</a>
-      </div>
+    <div class="reveal text-center max-w-2xl mx-auto">
+      <p class="eyebrow text-cyan-700">Loved By Local Homeowners</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold text-ink mt-3">Reviews from your neighbors.</h2>
+      <p class="lead text-slate text-lg mt-4">Real, verified reviews — pulled live from our Google Business Profile.</p>
     </div>
 
-    <!-- NOTE: placeholder testimonials styled as Google reviews — swap for real Google reviews before launch -->
-    <div class="mt-12 grid md:grid-cols-3 gap-5">
-      <figure class="reveal ucard bg-white rounded-3xl border border-mist p-7 shadow-card hover:shadow-cardhover hover:-translate-y-1">
-        <div class="flex items-center justify-between">
-          <div class="text-amber" aria-hidden="true">★★★★★</div>
-          <svg viewBox="0 0 48 48" class="h-5 w-5" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.6l6.2 5.2C39.9 36.5 44 31 44 24c0-1.3-.1-2.6-.4-3.5z"/></svg>
-        </div>
-        <blockquote class="lead text-ink/90 mt-4 text-[1.02rem]">"Our siding had years of green buildup — looked brand new the same afternoon. Polite, on time, and the quote was exactly what I paid."</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3">
-          <span class="grid place-items-center h-10 w-10 rounded-full bg-navy text-cyan-300 font-display font-semibold">SM</span>
-          <span><span class="block font-semibold text-ink text-sm">Sarah M.</span><span class="block text-slate text-xs">Plain City, OH</span></span>
-        </figcaption>
-      </figure>
-
-      <figure class="reveal ucard bg-white rounded-3xl border border-mist p-7 shadow-card hover:shadow-cardhover hover:-translate-y-1" style="transition-delay:.08s">
-        <div class="flex items-center justify-between">
-          <div class="text-amber" aria-hidden="true">★★★★★</div>
-          <svg viewBox="0 0 48 48" class="h-5 w-5" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.6l6.2 5.2C39.9 36.5 44 31 44 24c0-1.3-.1-2.6-.4-3.5z"/></svg>
-        </div>
-        <blockquote class="lead text-ink/90 mt-4 text-[1.02rem]">"They cleaned our solar panels and the difference was night and day. You can tell they actually know the right method for each surface."</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3">
-          <span class="grid place-items-center h-10 w-10 rounded-full bg-navy text-cyan-300 font-display font-semibold">DR</span>
-          <span><span class="block font-semibold text-ink text-sm">Dave R.</span><span class="block text-slate text-xs">Dublin, OH</span></span>
-        </figcaption>
-      </figure>
-
-      <figure class="reveal ucard bg-white rounded-3xl border border-mist p-7 shadow-card hover:shadow-cardhover hover:-translate-y-1" style="transition-delay:.16s">
-        <div class="flex items-center justify-between">
-          <div class="text-amber" aria-hidden="true">★★★★★</div>
-          <svg viewBox="0 0 48 48" class="h-5 w-5" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.6l6.2 5.2C39.9 36.5 44 31 44 24c0-1.3-.1-2.6-.4-3.5z"/></svg>
-        </div>
-        <blockquote class="lead text-ink/90 mt-4 text-[1.02rem]">"Driveway and gutters look incredible. Booking was easy and they cleaned up after themselves. Already scheduled them for next spring."</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3">
-          <span class="grid place-items-center h-10 w-10 rounded-full bg-navy text-cyan-300 font-display font-semibold">JK</span>
-          <span><span class="block font-semibold text-ink text-sm">Jenna K.</span><span class="block text-slate text-xs">Marysville, OH</span></span>
-        </figcaption>
-      </figure>
+    <!-- Live Google reviews — Featurable widget, auto-syncs from the Google Business Profile -->
+    <div class="reveal mt-12">
+      <div id="featurable-8eb3ac7e-5a7b-4434-9932-12cf9758b9ef" data-featurable-async></div>
+      <script src="https://featurable.com/assets/bundle.js" defer charset="UTF-8"></script>
     </div>
 
     <!-- Review CTAs -->
     <div class="reveal mt-10 flex flex-col sm:flex-row sm:items-center gap-3">
-      <!-- TODO: point "Leave a review" to https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID -->
-      <a href="https://www.google.com/maps/search/Mullet+Power+Wash+Plain+City+OH" target="_blank" rel="noopener" class="btn btn-navy px-6 py-3">
+      <a href="https://g.page/r/CSrk1wjfDTNLEAE/review" target="_blank" rel="noopener" class="btn btn-navy px-6 py-3">
         <svg viewBox="0 0 48 48" class="h-4 w-4" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.6l6.2 5.2C39.9 36.5 44 31 44 24c0-1.3-.1-2.6-.4-3.5z"/></svg>
         Leave us a Google review
       </a>
