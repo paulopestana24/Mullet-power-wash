@@ -64,6 +64,12 @@
   }
 </script>
 
+<!-- ===== Vercel Web Analytics =====
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
 <style>
   :root{
     --ease: cubic-bezier(.22,1,.36,1);
@@ -188,7 +194,6 @@
 </script>
 <!-- Analytics: Vercel Web Analytics (enable in the Vercel dashboard) + optional GA4 -->
 <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   window.MPW_GA_ID = ""; /* paste GA4 Measurement ID (G-XXXXXXXXXX) to switch on Google Analytics */
   (function(){ var id = window.MPW_GA_ID; if(!id) return;
     var s=document.createElement('script'); s.async=1; s.src='https://www.googletagmanager.com/gtag/js?id='+id;
@@ -196,7 +201,6 @@
     window.gtag=function(){window.dataLayer.push(arguments);}; window.gtag('js', new Date()); window.gtag('config', id);
   })();
 </script>
-<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body class="antialiased">
 <div class="grain-fixed" aria-hidden="true"></div>
