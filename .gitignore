@@ -11,6 +11,20 @@ temporary screenshots/
 proof-of-work/
 _contactsheet.html
 
+# Internal CEO ops command center (holds client data, owners, tactics — never deployed).
+# Source of truth: ops-dashboard/ops-state.json -> build_dashboard.py -> dashboard.html (Artifact).
+ops-dashboard/
+
+# Authenticated GBP screenshot tool + its persistent Chrome profile (holds Google
+# session cookies — MUST never be committed). Internal ops tooling.
+.gbp-chrome/
+gbp-shot.mjs
+
+# Internal Leadsnap rank heatmap screenshots (rank data — never deployed to the public site)
+*Leadsnap*.JPG
+*Leadsnap*.jpg
+*Leadsnap*.png
+
 # Bulk download archives (duplicate source photos — not for the site)
 *.zip
 
