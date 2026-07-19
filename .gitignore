@@ -25,6 +25,13 @@ gbp-shot.mjs
 *Leadsnap*.jpg
 *Leadsnap*.png
 
+# Internal GBP before/after work + GMB Everywhere scans (proof-of-work + tactics — never deploy)
+GBP*.JPG
+GBP*.jpg
+GBP*.png
+GMB*.JPG
+GMB*.jpg
+
 # Bulk download archives (duplicate source photos — not for the site)
 *.zip
 
